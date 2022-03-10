@@ -2,7 +2,6 @@ import React from 'react';
 import { render } from 'react-dom';
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import { HomePage } from './Pages/HomePage';
-import { SecondPage } from './Pages/SecondPage';
 
 render(
   <React.StrictMode>

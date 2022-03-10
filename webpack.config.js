@@ -17,7 +17,7 @@ module.exports = {
   },
   devServer: {
     static: path.resolve(__dirname, 'public'),
-    hot: true
+    hot: true,
   },
   plugins: [
     isDevelopment && new ReactRefreshWebPlugin(),
@@ -34,15 +34,26 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             plugins: [
-              isDevelopment && require.resolve('react-refresh/babel')
-            ].filter(Boolean)
-          }
+              isDevelopment && require.resolve('react-refresh/babel'),
+            ].filter(Boolean),
+          },
         },
       },
       {
         test: /\.scss$/,
         exclude: /node_modules/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(png|jp(e*)g|svg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'images/[hash]-[name].[ext]',
+            },
+          },
+        ],
       },
     ],
   },
