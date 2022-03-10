@@ -1,22 +1,61 @@
-import { SimpleGrid, Box, Text, useColorMode, Heading } from '@chakra-ui/react';
+import { Box, Text, SimpleGrid, Heading, Image } from '@chakra-ui/react';
 
 export function App() {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const assets = {
+    animalBg: './assets/doushouqi-elephant.svg',
+  };
+
   return (
     <>
-      <Heading>Decifrando</Heading>
-      <SimpleGrid columns={2} spacing={10}>
-        <Box display="flex" borderRadius="10px" bg="tomato">
-          <Text>Animais</Text>
+      <SimpleGrid
+        columns={2}
+        spacing={10}
+        align="center"
+        justify="center"
+        color="black"
+      >
+        <Box
+          borderRadius="10px"
+          bg="yellow.300"
+          minH="sm"
+          minW="sm"
+          p="4"
+          m="4"
+        >
+          <Heading w="100%">Animais</Heading>
         </Box>
-        <Box display="flex" borderRadius="10px" bg="tomato">
-          <Text>Cores</Text>
+        <Box
+          borderRadius="10px"
+          bg="yellow.300"
+          minH="sm"
+          minW="sm"
+          p="4"
+          m="4"
+        >
+          <Heading w="100%">Cores</Heading>
+          <Box>
+            <img src="./assets/doushouqi-elephant.svg" />
+          </Box>
         </Box>
-        <Box display="flex" borderRadius="10px" bg="tomato">
-          <Text>Frutas</Text>
+        <Box
+          borderRadius="10px"
+          bg="yellow.300"
+          minH="sm"
+          minW="sm"
+          p="4"
+          m="4"
+        >
+          <Heading w="100%">Frutas</Heading>
         </Box>
-        <Box display="flex" borderRadius="10px" bg="tomato">
-          <Text>Veículos</Text>
+        <Box
+          borderRadius="10px"
+          bg="yellow.300"
+          minH="sm"
+          minW="sm"
+          p="4"
+          m="4"
+        >
+          <Heading w="100%">Veiculos</Heading>
         </Box>
       </SimpleGrid>
     </>
